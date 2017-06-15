@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.chulili.autosizetextview.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/autosize_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/autosize_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:text="@string/auto_size_context"
+            android:background="@android:color/darker_gray"
+            android:autoSizeTextType="uniform"
+            android:layout_margin="20dp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="100sp"
+            android:autoSizeStepGranularity="2sp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/autosize_args_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
+        android:layout_marginLeft="20dp"
+        android:autoSizeMinTextSize="16sp"
+        android:autoSizeMaxTextSize="100sp"
+        android:autoSizeStepGranularity="2sp"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/add_20dp_width"
+            android:layout_marginLeft="20dp"
+            android:autoSizeMinTextSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="增加20dp的宽"/>
+
+        <Button
+            android:id="@+id/reduce_20dp_width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="16sp"
+            android:text="减少20dp的宽"
+            android:layout_toRightOf="@id/add_20dp_width"/>
+
+        <Button
+            android:id="@+id/add_20dp_height"
+            android:layout_marginLeft="20dp"
+            android:autoSizeMinTextSize="16sp"
+            android:layout_below="@id/add_20dp_width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="增加20dp的高"/>
+
+        <Button
+            android:id="@+id/reduce_20dp_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/add_20dp_width"
+            android:textSize="16sp"
+            android:text="减少20dp的高"
+            android:layout_toRightOf="@id/add_20dp_height"/>
+
+        <Button
+            android:id="@+id/change_autosize_type"
+            android:layout_marginLeft="20dp"
+            android:autoSizeMinTextSize="16sp"
+            android:layout_below="@id/add_20dp_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="改变自动填充文字类型"/>
+
+        <Button
+            android:id="@+id/reset_all_perporties"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/change_autosize_type"
+            android:layout_below="@id/reduce_20dp_height"
+            android:textSize="16sp"
+            android:text="重置所有属性"
+            />
+
+        <Button
+            android:id="@+id/set_autosize_presets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/change_autosize_type"
+            android:textSize="16sp"
+            android:text="设置自动填充属性为presets"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
